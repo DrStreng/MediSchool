@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="/templates/default.xhtml">
+
+    <ui:define name="tresc">
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputText value="Email"/>
+                <h:inputText id="email" value="#{userBean.user.email}"/>
+                <h:outputText value="PASSWORD"/>
+                <h:inputSecret id="password" value="#{userBean.user.email}"/>
+            </h:panelGrid>
+            <h:commandButton value="Zmień" action="#{userBean.editAll}"/>
+        </h:form>
+    </ui:define>
+</ui:composition>
+

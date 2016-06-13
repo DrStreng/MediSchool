@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html">
+
+    <h:form rendered="#{empty user}">
+        <h:panelGrid columns="6">
+            <h:outputText value="login: "></h:outputText>
+            <h:inputText value="#{userBean.user.login}"></h:inputText>
+            <h:outputText value="password"></h:outputText>
+            <h:inputSecret value="#{userBean.user.password}"></h:inputSecret>
+            <h:commandButton value="Zaloguj" action="#{userBean.logowanie}"></h:commandButton>
+
+            <div class='link'>
+                <a href="http://localhost:8080/MediSchool_war_exploded/addUser.jsf">Zarejestruj Się</a>
+            </div>
+        </h:panelGrid>
+    </h:form>
+
+    <h:form rendered="#{not empty user}">
+        #{user.login}
+        <h:commandButton value="Wyloguj" action="#{userBean.logout}"></h:commandButton>
+
+        <h:panelGrid columns="5">
+
+        </h:panelGrid>
+    </h:form>
+</ui:composition>

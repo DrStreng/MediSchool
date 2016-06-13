@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="/templates/default.xhtml">
+    <ui:define name="menuPion2">
+        <ul>
+            <li><a href="addStudent.jsf">Dodaj Ucznia</a></li>
+        </ul>
+    </ui:define>
+
+    <ui:define name="tresc">
+        <h:form>
+            <h:dataTable value="#{studentBean.students}" var="item">
+                <f:facet name="header">#{msg.studentAllLabel}</f:facet>
+                <h:column>
+                    <f:facet name="header"> Uczen </f:facet>
+
+                    <div class="wypisz">
+                        <ul>
+                            <li>
+                                #{item.name}
+                                #{item.surname}
+                                #{item.description}
+                                #{item.address}
+                                #{item.personalIdentificationNumber}
+                            </li>
+                        </ul>
+                    </div>
+                </h:column>
+                <h:column>
+
+                    <f:facet name="header"></f:facet>
+
+                    <div class="action">
+                        <ul>
+                            <li>
+                                <h:commandLink value=" delete " action="#{studentBean.deleteStudent}"/>
+                                <h:commandLink value=" edit " action="#{studentBean.editStudent}"/>
+                            </li>
+                        </ul>
+                    </div>
+                </h:column>
+            </h:dataTable>
+        </h:form>
+    </ui:define>
+</ui:composition>
+

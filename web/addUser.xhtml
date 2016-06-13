@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="/templates/default.xhtml">
+
+    <ui:define name="tresc">
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputText value="Login: "></h:outputText>
+                <h:inputText value="#{userBean.user.login}"></h:inputText>
+
+                <h:outputText value="Email: "></h:outputText>
+                <h:inputText value="#{userBean.user.email}"></h:inputText>
+
+                <h:outputText value="Password: "></h:outputText>
+                <h:inputSecret value="#{userBean.user.password}"></h:inputSecret>
+            </h:panelGrid>
+            <h:commandButton value="Zapisz" action="#{userBean.saveUser}"></h:commandButton>
+            <a href="http://localhost:8080/MediSchool_war_exploded/home.jsf">ANULUJ</a>
+            <h:panelGrid>
+                <h:messages showDetail="#{true}" showSummary="#{false}"/>
+            </h:panelGrid>
+        </h:form>
+    </ui:define>
+</ui:composition>
+

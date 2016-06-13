@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="/templates/default.xhtml">
+
+    <ui:define name="menuPion2">
+        <ul>
+            <li><a href="addSchoolClass.jsf">Dodaj Klasę</a></li>
+        </ul>
+    </ui:define>
+
+    <ui:define name="tresc">
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputText value="Numer: "></h:outputText>
+                <h:inputText value="#{SchoolClassBean.schoolClass.number}"></h:inputText>
+
+                <h:outputText value="Grupa: "></h:outputText>
+                <h:inputText value="#{SchoolClassBean.schoolClass.grupa}"></h:inputText>
+            </h:panelGrid>
+            <h:commandButton value="Zmień" action="#{SchoolClassBean.editAll}"/>
+        </h:form>
+    </ui:define>
+</ui:composition>
+
+

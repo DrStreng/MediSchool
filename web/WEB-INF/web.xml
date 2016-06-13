@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+    <display-name>MediSchool</display-name>
+    <filter>
+        <filter-name>loginFilter</filter-name>
+        <filter-class>web.loginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>loginFilter</filter-name>
+        <url-pattern>/filter/*</url-pattern>
+    </filter-mapping>
+</web-app>

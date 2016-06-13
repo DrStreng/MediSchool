@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>MediSchool</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/MediSchool_war_exploded/CSS/style.css"/>
+</h:head>
+<h:body>
+    <div id="strona">
+        <ui:insert name="strona">
+            <div id="naglowek">
+                <ui:insert name="naglowek">
+                    <h1>MediSchool</h1>
+
+                    <h2>Dawid Streng</h2>
+                </ui:insert>
+            </div>
+
+            <div id="menuPoziome">
+                <ui:insert name="menuPoziome">
+                    <ui:include
+                            src="http://localhost:8080/MediSchool_war_exploded/views/login.xhtml"></ui:include>
+                </ui:insert>
+            </div>
+
+            <div id="kolumnaLewa">
+                <ui:insert name="kolumnaLewa">
+                    <ui:include src="/views/menu.xhtml"/>
+
+                    <div id="menuPion2">
+                        <ui:insert name="menuPion2"></ui:insert>
+                    </div>
+                </ui:insert>
+            </div>
+
+            <div id="kolumnaPrawa">
+                <ui:insert name="kolumnaPrawa">
+                    <div id="tresc">
+                        <ui:insert name="tresc">
+
+                        </ui:insert>
+                    </div>
+                </ui:insert>
+            </div>
+            <div id="stopka">
+                <ui:insert name="stopka">
+                    STOPKA
+                </ui:insert>
+            </div>
+        </ui:insert>
+    </div>
+</h:body>
+</html>

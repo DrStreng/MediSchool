@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="/templates/default.xhtml">
+    <ui:define name="menuPion2">
+        <ul>
+            <li><a href="addSchool.jsf">Dodaj Szkołę</a></li>
+        </ul>
+    </ui:define>
+
+    <ui:define name="tresc">
+        <h:form>
+            <h:dataTable value="#{schoolBean.schools}" var="item">
+                <f:facet name="header">#{msg.schoolAllLabel}</f:facet>
+                <h:column>
+                    <f:facet name="header"> City </f:facet>
+
+                    <div class="wypisz">
+                        <ul>
+                            <li>
+                                <a href="http://localhost:8080/MediSchool_war_exploded/filter/schoolclass.jsf?id=#{item.id}">#{item.city}</a>
+                    #{item.address}
+                                #{item.schoolName}</li>
+                        </ul>
+                    </div>
+                </h:column>
+                <h:column>
+
+                    <f:facet name="header"></f:facet>
+
+                    <div class="action">
+                        <ul>
+                            <li>
+                                <h:commandLink value=" delete " action="#{schoolBean.deleteSchool}"/>
+                                <h:commandLink value=" edit " action="#{schoolBean.editSchool}"/>
+                            </li>
+                        </ul>
+                    </div>
+                </h:column>
+            </h:dataTable>
+        </h:form>
+    </ui:define>
+</ui:composition>

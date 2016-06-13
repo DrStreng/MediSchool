@@ -1,0 +1,207 @@
+body {
+    background: #1f1f1f url(http://localhost:8080/MediSchool_war_exploded/CSS/images/black.jpg) no-repeat;
+    color: #EAEAEA;
+    background-attachment: fixed;
+    background-position: center;
+    text-decoration: none;
+}
+
+#strona {
+    color: #EAEAEA;
+    margin: 20px auto;
+    width: 97%;
+    border-radius: 12px;
+}
+
+#a {
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+}
+
+#index {
+    width: 500px;
+    margin: 100px auto 115px;
+
+}
+
+#index_form {
+    width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+    font-family: "Arial", "Helvetica", sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    width: 80%;
+}
+
+form {
+    margin: 0;
+    display: block;
+}
+
+#naglowek {
+    width: 100%;
+    text-align: right;
+}
+
+#title h1 {
+    font-family: Courier New, monospace;
+}
+
+#title h2 {
+    font-style: italic;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+#kolumnaPrawa {
+    float: right;
+    width: 84%;
+    background: rgba(0, 0, 0, 0.2);
+    margin: 5px;
+    border-radius: 12px;
+}
+
+#menuPoziome,
+#menuPoziome ul,
+#menuPoziome ul li,
+#menuPoziome ul li a,
+#meuPoziome #menu-button {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    line-height: 1;
+    display: block;
+    position: relative;
+    float: right;
+}
+
+#menuPoziome {
+    font-family: Monospaced, sans-serif;
+    background: #1F1F1F;
+}
+
+#menuPoziome #menu-button {
+    display: none;
+}
+
+.clear {
+    clear: both;
+    height: 0px;
+}
+
+#tresc {
+    width: 100%;
+    text-align: left;
+    pedding: 10px;
+    margin-left: 20px;
+}
+
+.content {
+    background: rgba(0, 0, 1, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#kolumnaLewa {
+    float: left;
+    width: 14%;
+    background: rgba(0, 0, 0, 0.2);
+    margin: 5px;
+    border-radius: 12px;
+}
+
+#menuPion2 {
+    list-style-type: none;
+    padding: 0px;
+    line-height: 20px;
+    font-size: 12px;
+    text-align: right;
+}
+
+#menuPion {
+    position: relative;
+    margin: 0;
+    font-family: 'Roboto Condensed';
+    line-height: 1;
+}
+
+#menuPion ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+}
+
+#menuPion ul li {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+#menuPion > ul > li > a {
+    color: #dddddd;
+    text-transform: uppercase;
+    display: block;
+    padding: 20px;
+    border-top: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    background: #222222;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: 300;
+    transition: all 0.25s ease-in;
+    position: relative;
+}
+
+#menuPion ul li a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.link a {
+    color: snow;
+    text-decoration: none;
+}
+
+.wypisz li {
+    list-style-type: none;
+}
+
+.wypisz a {
+    color: snow;
+    text-decoration: none;
+}
+
+.action li {
+    list-style-type: none;
+}
+
+.action a {
+    background: rgba(0, 0, 0, 0.5);
+    color: snow;
+    text-decoration: none;
+    transition: all linear .3s .01s;
+    border: 1px solid #525252;
+    padding: 10px;
+    dispaly: block;
+}
+
+#stopka {
+    clear: both;
+    width: 100%;
+    text-align: center;
+    float: inherit;
+}

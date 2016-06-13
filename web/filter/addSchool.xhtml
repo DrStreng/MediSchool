@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="/templates/default.xhtml">
+    <ui:define name="menuPion2">
+        <ul>
+
+            <li><a href="addSchool.jsf">Dodaj Szkołę</a></li>
+        </ul>
+    </ui:define>
+
+    <ui:define name="tresc">
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputText value="Miasto: "></h:outputText>
+                <h:inputText value="#{schoolBean.school.city}"></h:inputText>
+
+                <h:outputText value="Adres: "></h:outputText>
+                <h:inputText value="#{schoolBean.school.address}"></h:inputText>
+
+                <h:outputText value="Nazwa Szkoły: "></h:outputText>
+                <h:inputText value="#{schoolBean.school.schoolName}"></h:inputText>
+            </h:panelGrid>
+                <h:commandButton value="Zapisz" action="#{schoolBean.saveSchool}"></h:commandButton>
+            <h:panelGrid>
+                <h:messages showDetail="#{true}" showSummary="#{false}"/>
+            </h:panelGrid>
+        </h:form>
+    </ui:define>
+</ui:composition>

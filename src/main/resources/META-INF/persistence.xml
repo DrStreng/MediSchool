@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+    <persistence-unit name="connect">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <jta-data-source>jdbc/test</jta-data-source>
+
+        <properties>
+            <!-- Properties for Hibernate (default provider for JBoss AS) -->
+            <property name="hibernate.transaction.flush_before_completion"
+                      value="true"/>
+            <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>
+            <!-- Properties for EclipseLink (default provider for GlassFish) -->
+            <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
+
+            <property name="eclipselink.ddl-generation.output-mode" value="database"/>
+            <property name="eclipselink.logging.level" value="FINE"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hbm2ddl.auto" value="create"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>
